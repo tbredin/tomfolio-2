@@ -27,9 +27,10 @@
   --selected-text-bg: var(--accent-color);
   /* Spacing */
   --spacing: 1rem;
+  --content-width: 32rem;
   /* Typography */
-  --global-leading: 1.4;
-  --weight-headings: 400;
+  --global-leading: 1.5;
+  --weight-headings: 500;
   --weight-body: 400;
   --size-headings: 0.875rem;
   --size-body: 0.875rem;
@@ -38,6 +39,9 @@
   --color-headings: --purple-shade-90;
   --color-body: --purple-shade-90;
   --font: "IBM Plex Mono", "Space mono", monospace;
+  --margins: 1.25rem;
+  --rhythm: 21px;
+  --rhythm-a: 0.25;
 
   /* Global styles */
   font-family: var(--font);
@@ -65,25 +69,41 @@
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: start;
   min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
   background-color: var(--site-bg);
   color: var(--site-color);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) calc(var(--rhythm) - 1px),
+    rgba(255,255,255,var(--rhythm-a)) calc(var(--rhythm) - 1px),
+    rgba(255,255,255,var(--rhythm-a)) var(--rhythm)
+  );
+  background-repeat: repeat;
+  background-size: 100% var(--rhythm);
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-size: var(--size-headings);
   font-style: var(--style-headings);
   font-weight: var(--weight-headings);
-  color: var(--color-headings)
+  color: var(--color-headings);
+  margin-top: var(--margins);
+  margin-bottom: var(--margins);
 }
 
 p {
   font-size: var(--size-body);
   font-style: var(--style-body);
   font-weight: var(--weight-body);
-  color: var(--site-color)
+  color: var(--site-color);
+  margin-top: var(--margins);
+  margin-bottom: var(--margins);
 }
 
 @media (prefers-color-scheme: light) {

@@ -20,9 +20,8 @@ export class MainContent extends LitElement {
   static styles = css`
     main {
       padding: var(--spacing);
-      
-      width: 100%;
-      max-width: 26rem;
+      width: var(--content-width);
+      max-width: 100%;
     }
   `;
 

@@ -22,12 +22,17 @@ export class DividedSection extends LitElement {
       width: 1rem;
       display: inline-block;
       border: 0 none;
-      border-bottom: 4px double var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+      opacity: 0.25;
+      margin: 0;
+      position: absolute;
+      bottom: 0;
     }
 
     section {
-      padding-top: var(--spacing)
-      padding-bottom: var(--spacing)
+      padding-top: var(--spacing);
+      padding-bottom: var(--spacing);
+      position: relative;
     }
   `;
 
@@ -35,7 +40,7 @@ export class DividedSection extends LitElement {
     return html`
       <section>
         <slot></slot>
-        <br/>
+        <hr/>
       </section>
     `
   }
