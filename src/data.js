@@ -129,8 +129,8 @@ export const dataClients = [
     title: "ANZ",
   },
   {
-    title: "Moreland City Council",
-    url: "https://www.moreland.vic.gov.au/",
+    title: "Merri-Bek City Council",
+    url: "https://www.merri-bek.vic.gov.au/",
   },
   {
     title: "ACMI: The Story of the Moving Image",

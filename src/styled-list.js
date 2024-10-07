@@ -82,13 +82,13 @@ export class StyledList extends LitElement {
           ${item.url || item.to
             ? html`<styled-a href="${item.url || item.to}">${item.title}</styled-a>`
             : html`<span>${item.title}</span>`}
-          ${item.award ? html`<img 
+          ${item.award ? html`<a href="${item.url || item.to}"><img 
             class="award" 
-            title="This project won an award!" 
-            aria-label="This project won an award!" 
-            alt="This project won an award!" 
+            title="View award won for ${item.title}" 
+            aria-label="View award won for ${item.title}" 
+            alt="View award won for ${item.title}" 
             src="/src/assets/award.png" 
-          />` : ''}
+          /></a>` : ''}
         </li>`
     );
   }
