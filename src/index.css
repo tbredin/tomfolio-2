@@ -1,0 +1,94 @@
+ /* 
+ # TomFolio styles 
+ 
+ Setup all our custom props and root styles first
+ */
+
+:root {
+  /*  Colours */
+  --purple-tint-90: #f0eff2;
+  --purple-tint-70: #d0bbfa;
+  --purple-shade-10: #6453e0;
+  --purple-shade-70: #3c3845;
+  --purple-shade-90: #131117;
+  --green-tint-90: #ebf1eb;
+  --green-shade-70: #404c40;
+  --green-shade-90: #111711;
+  /* Themes */
+  --site-bg: var(--green-shade-90);
+  --site-color: var(--purple-tint-90);
+  --accent-color: var(--purple-tint-70);
+  --accent-subtle-color: var(--purple-shade-10);
+  /* UI */
+  --link-color: var(--accent-color);
+  --link-hover-color: var(--accent-color);
+  --divider-color: var(--accent-color);
+  --selected-text-color: var(--site-bg);
+  --selected-text-bg: var(--accent-color);
+  /* Spacing */
+  --spacing: 1rem;
+  /* Typography */
+  --global-leading: 1.4;
+  --weight-headings: 400;
+  --weight-body: 400;
+  --size-headings: 0.875rem;
+  --size-body: 0.875rem;
+  --style-headings: italic;
+  --style-body: normal;
+  --color-headings: --purple-shade-90;
+  --color-body: --purple-shade-90;
+  --font: "IBM Plex Mono", "Space mono", monospace;
+
+  /* Global styles */
+  font-family: var(--font);
+  line-height: var(--global-leading);
+  font-weight: var(--weight-body);
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: var(--purple-shade-10);
+    --site-bg: var(--green-tint-90);
+    --site-color: var(--purple-shade-90);
+  }
+}
+
+::selection {
+  background: var(--selected-text-bg);
+  color: var(--selected-text-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start;
+  min-height: 100vh;
+  background-color: var(--site-bg);
+  color: var(--site-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: var(--size-headings);
+  font-style: var(--style-headings);
+  font-weight: var(--weight-headings);
+  color: var(--color-headings)
+}
+
+p {
+  font-size: var(--size-body);
+  font-style: var(--style-body);
+  font-weight: var(--weight-body);
+  color: var(--site-color)
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}

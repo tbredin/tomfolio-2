@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/main-content.js"></script>
+    <script type="module" src="/src/divided-section.js"></script>
+    <script type="module" src="/src/project-list.js"></script>
+    <script type="module" src="/src/styled-a.js"></script>
+  </head>
+  <body>
+    <main-content>
+      <divided-section>
+        ♦
+        <h1>
+          Kia ora!<br/> 
+          My name is Tom.<br/>
+          I build good things for the web ✨
+        </h1>
+      </divided-section>
+      <divided-section>
+        <h2>Bio</h2>
+        <p>Kia ora, I'm Tom, a front end developer and design engineer based in Naarm (Melbourne).</p>
+        <p>For over a decade now I've been building good things for the web, usually working for digital agencies. With a sharp eye for detail, I specialise in transforming designs into beautiful, accessible, and maintainable code.</p>
+        <p>I also take pictures of space — <styled-a href="#">here's a photo of M42</styled-a></p>
+      </divided-section>
+      
+      <divided-section>
+        <h2>Past Work</h2>
+        <project-list></project-list>
+      </divided-section>
+
+    </main-content>
+  </body>
+</html>
