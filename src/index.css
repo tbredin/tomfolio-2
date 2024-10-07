@@ -13,7 +13,7 @@
   --purple-shade-10: #6453e0;
   --purple-shade-70: #3c3845;
   --purple-shade-90: #131117;
-  --green-tint-90: #ebf1eb;
+  --green-tint-90: #e9f1e9;
   --green-shade-70: #404c40;
   --green-shade-90: #111711;
   --yellow: #fdd2af;
@@ -30,6 +30,7 @@
   --divider-color: var(--accent-color);
   --selected-text-color: var(--site-bg);
   --selected-text-bg: var(--accent-color);
+  --footer: black;
   
   /* Typography */
   --global-leading: 1.5;
@@ -70,6 +71,15 @@
     --color-headings: var(--purple-shade-90);
     --color-body: var(--purple-shade-70);
     --link-hover-color: var(--green-shade-90);
+    --footer: white;
+  }
+}
+
+@media screen and (max-width: 24rem) {
+  :root {
+    --spacing: calc(var(--rhythm) / 4);
+    --section-margin: var(--rhythm);
+    --sparkle-w: 18vw;
   }
 }
 
@@ -98,6 +108,7 @@ body {
   );
   background-repeat: repeat;
   background-size: 100% var(--rhythm);
+  border-bottom: 4px solid var(--footer);
 }
 
 main {
