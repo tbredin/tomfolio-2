@@ -30,7 +30,7 @@
   --divider-color: var(--accent-color);
   --selected-text-color: var(--site-bg);
   --selected-text-bg: var(--accent-color);
-  --footer: black;
+  --contrasting: black;
   
   /* Typography */
   --global-leading: 1.5;
@@ -71,7 +71,7 @@
     --color-headings: var(--purple-shade-90);
     --color-body: var(--purple-shade-70);
     --link-hover-color: var(--green-shade-90);
-    --footer: white;
+    --contrasting: white;
   }
 }
 
@@ -108,7 +108,8 @@ body {
   );
   background-repeat: repeat;
   background-size: 100% var(--rhythm);
-  border-bottom: 4px solid var(--footer);
+  border-bottom: 5px solid var(--contrasting);
+  text-shadow: 0 1px 0 0 var(--contrasting);
 }
 
 main {
