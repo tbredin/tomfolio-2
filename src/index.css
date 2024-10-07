@@ -4,6 +4,8 @@
  Setup all our custom props and root styles first
  */
 
+ @import 'node_modules/modern-normalize/modern-normalize.css';
+
 :root {
   /*  Colours */
   --purple-tint-90: #f0eff2;
@@ -14,20 +16,21 @@
   --green-tint-90: #ebf1eb;
   --green-shade-70: #404c40;
   --green-shade-90: #111711;
+  --yellow: #fdd2af;
+  --yellow-light: #fce8d7;
   /* Themes */
   --site-bg: var(--green-shade-90);
-  --site-color: var(--purple-tint-90);
+  --site-color: var(--color-body);
   --accent-color: var(--purple-tint-70);
+  --accent-light-color: var(--purple-tint-90);
   --accent-subtle-color: var(--purple-shade-10);
   /* UI */
   --link-color: var(--accent-color);
-  --link-hover-color: var(--accent-color);
+  --link-hover-color: var(--yellow);
   --divider-color: var(--accent-color);
   --selected-text-color: var(--site-bg);
   --selected-text-bg: var(--accent-color);
-  /* Spacing */
-  --spacing: 1rem;
-  --content-width: 32rem;
+  
   /* Typography */
   --global-leading: 1.5;
   --weight-headings: 500;
@@ -36,12 +39,18 @@
   --size-body: 0.875rem;
   --style-headings: italic;
   --style-body: normal;
-  --color-headings: --purple-shade-90;
-  --color-body: --purple-shade-90;
+  --color-headings: #fff;
+  --color-body: var(--purple-tint-90);
+  --rhythm: calc(var(--size-body) * var(--global-leading));
+  --rhythm-a: 0;
   --font: "IBM Plex Mono", "Space mono", monospace;
-  --margins: 1.25rem;
-  --rhythm: 21px;
-  --rhythm-a: 0.25;
+  --spacing: calc(var(--rhythm) / 2);
+  --margins: 0;
+  --content-width: 32rem;
+  --section-margin: calc(var(--rhythm) * 2);
+
+  /* Misc */
+  --sparkle-w: 70px;
 
   /* Global styles */
   font-family: var(--font);
@@ -58,7 +67,9 @@
   :root {
     --accent-color: var(--purple-shade-10);
     --site-bg: var(--green-tint-90);
-    --site-color: var(--purple-shade-90);
+    --color-headings: var(--purple-shade-90);
+    --color-body: var(--purple-shade-70);
+    --link-hover-color: var(--green-shade-90);
   }
 }
 
@@ -69,8 +80,9 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 calc(5 * var(--spacing));
   display: flex;
+  flex-direction: column;
   place-items: start;
   min-height: 100vh;
   max-width: 100%;
@@ -88,13 +100,19 @@ body {
   background-size: 100% var(--rhythm);
 }
 
+main {
+  padding: var(--spacing) calc(var(--spacing) + var(--sparkle-w) / 2);
+  width: var(--content-width);
+  max-width: 100%;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-size: var(--size-headings);
   font-style: var(--style-headings);
   font-weight: var(--weight-headings);
   color: var(--color-headings);
-  margin-top: var(--margins);
-  margin-bottom: var(--margins);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 p {
@@ -102,7 +120,7 @@ p {
   font-style: var(--style-body);
   font-weight: var(--weight-body);
   color: var(--site-color);
-  margin-top: var(--margins);
+  margin-top: 0;
   margin-bottom: var(--margins);
 }
 

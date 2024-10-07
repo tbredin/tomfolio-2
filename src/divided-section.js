@@ -27,11 +27,12 @@ export class DividedSection extends LitElement {
       margin: 0;
       position: absolute;
       bottom: 0;
+      left: 0;
     }
 
     section {
-      padding-top: var(--spacing);
-      padding-bottom: var(--spacing);
+      padding-top: var(--section-margin);
+      padding-bottom: var(--section-margin);
       position: relative;
     }
   `;
