@@ -35,7 +35,6 @@ export class StyledList extends LitElement {
     }
 
     .bullet {
-      content: '';
       position: absolute;
       left: -1rem;
       top: 0.75rem;

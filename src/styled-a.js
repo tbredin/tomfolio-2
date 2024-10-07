@@ -18,7 +18,7 @@ export class StyledAnchor extends LitElement {
       text-decoration: underline;
       text-decoration-skip: ink;
       text-decoratio
-      text-decoration-color: color-mix(in oklab, var(--link-color) 50%, #00FFFF00 50%)
+      text-decoration-color: color-mix(in hsl, var(--link-color) 25%, transparent)
     }
 
     a:hover {

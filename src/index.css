@@ -109,7 +109,6 @@ body {
   background-repeat: repeat;
   background-size: 100% var(--rhythm);
   border-bottom: 5px solid var(--contrasting);
-  text-shadow: 0 1px 0 0 var(--contrasting);
 }
 
 main {
