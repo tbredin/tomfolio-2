@@ -26,9 +26,7 @@ export class StyledAnchor extends LitElement {
   `;
 
   render() {
-    return html`
-      <a href="${this.href}"><slot></slot></a>
-    `
+    return html`<a href="${this.href}"><slot></slot></a>`
   }
 }
 
