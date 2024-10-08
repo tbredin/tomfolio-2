@@ -1,19 +1,17 @@
 import { LitElement, css, html } from 'lit'
 
-export class SparkleIcon extends LitElement {
+export class PlanetIcon extends LitElement {
   static styles = css`
     img {
-      width: var(--sparkle-w);
-      aspect-ratio: 70/79;
       display: block;
       margin: var(--spacing);
       transition: filter 1s;
-      filter: brightness(60%) sepia(100%) hue-rotate(-135deg);
       will-change: filter, opacity;
       image-rendering: pixelated;
-      position: fixed;
-      bottom: var(--spacing);
-      right: var(--spacing);
+      margin: 2rem 0.3rem -3rem;
+      padding: 2rem;
+      z-index: 10;
+      position: relative;
     }
 
     img:hover {
@@ -39,9 +37,9 @@ export class SparkleIcon extends LitElement {
 
   render() {
     return html`
-      <img src="src/assets/sparkle.gif" aria-hidden="true" />
+      <img src="src/assets/planet.gif" aria-hidden="true" />
     `
   }
 }
 
-window.customElements.define('sparkle-icon', SparkleIcon)
+window.customElements.define('planet-icon', PlanetIcon)

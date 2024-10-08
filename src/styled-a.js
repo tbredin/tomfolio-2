@@ -17,8 +17,7 @@ export class StyledAnchor extends LitElement {
       color: var(--link-color);
       text-decoration: underline;
       text-decoration-skip: ink;
-      text-decoratio
-      text-decoration-color: color-mix(in hsl, var(--link-color) 25%, transparent)
+      text-decoration-color: color-mix(in hsl, var(--link-color) 75%, transparent)
     }
 
     a:hover {

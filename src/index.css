@@ -4,7 +4,6 @@
  Setup all our custom props and root styles first
  */
 
- @import 'node_modules/modern-normalize/modern-normalize.css';
 
 :root {
   /*  Colours */
@@ -115,6 +114,7 @@ main {
   padding: var(--spacing) calc(var(--spacing) + var(--sparkle-w) / 2);
   width: var(--content-width);
   max-width: 100%;
+  will-change: opacity;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -135,9 +135,23 @@ p {
   margin-bottom: var(--margins);
 }
 
+.earth {
+  margin: -1rem -1.5rem;
+  transition: filter 1s;
+  cursor: crosshair;
+  will-change: filter, opacity;
+  padding: 1rem;
+}
+
+.earth:hover {
+  filter: brightness(70%) sepia(100%) hue-rotate(-15deg);
+}
+
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  .earth {
+    filter: brightness(50%) sepia(100%) hue-rotate(-135deg);
+  }
+  .earth:hover {
+    filter: brightness(60%) sepia(100%) hue-rotate(-15deg);
   }
 }

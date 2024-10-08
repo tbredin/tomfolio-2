@@ -45,7 +45,13 @@ export class StyledList extends LitElement {
     }
 
     .award {
-        transform: translateY(-1px);
+      display: inline-block;
+      padding: 0 0.25rem;
+      margin-left: -0.5rem;
+    }
+    
+    .award img {
+        transform: translateY(2px);
         image-rendering: pixelated;
     }
 
@@ -81,12 +87,11 @@ export class StyledList extends LitElement {
           ${item.url || item.to
             ? html`<styled-a href="${item.url || item.to}">${item.title}</styled-a>`
             : html`<span>${item.title}</span>`}
-          ${item.award ? html`<a href="${item.url || item.to}"><img 
-            class="award" 
+          ${item.award ? html`<a href="${item.url || item.to}" class="award"><img 
             title="View award won for ${item.title}" 
             aria-label="View award won for ${item.title}" 
             alt="View award won for ${item.title}" 
-            src="/src/assets/award.png" 
+            src="/src/assets/award.gif" 
           /></a>` : ''}
         </li>`
     );
