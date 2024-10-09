@@ -259,4 +259,7 @@ export const dataTools = [
   {
     title: "Calibre"
   },
+  {
+    title: "Svelte"
+  }
 ];

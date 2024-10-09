@@ -4,7 +4,6 @@ import { LitElement, css, html } from 'lit'
  * A divided section element
  *
  * @slot - This element has a slot
- * @csspart button - The button
  */
 export class DividedSection extends LitElement {
   static get properties() {

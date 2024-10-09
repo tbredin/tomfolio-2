@@ -9,7 +9,7 @@ export class StyledAnchor extends LitElement {
 
   constructor() {
     super()
-    this.href = '#';  // Default value for href
+    this.href = '#';  
   }
 
   static styles = css`

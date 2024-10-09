@@ -1,9 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { dataClients } from './data.js';
 
-/**
- * A custom element that renders a list of projects, clients, or contacts
- */
 export class ProjectList extends LitElement {
   render() {
     return html`

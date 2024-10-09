@@ -110,6 +110,10 @@ body {
   border-bottom: 5px solid var(--contrasting);
 }
 
+html {
+  background-color: var(--contrasting);
+}
+
 main {
   padding: var(--spacing) calc(var(--spacing) + var(--sparkle-w) / 2);
   width: var(--content-width);
