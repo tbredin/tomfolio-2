@@ -126,7 +126,7 @@ html {
   background-color: var(--contrasting);
 }
 
-main {
+.layout {
   padding: calc(var(--rhythm) * 2.5) calc(var(--spacing) + var(--sparkle-w) / 2);
   width: var(--content-width);
   max-width: 100%;
@@ -140,6 +140,10 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--color-headings);
   margin-top: 0;
   margin-bottom: 0;
+}
+
+h3,h4,h5,h6 {
+  font-weight: calc(var(--weight-headings) - 100);
 }
 
 p {
@@ -169,5 +173,22 @@ p {
   }
   .earth:hover {
     filter: brightness(60%) sepia(100%) hue-rotate(-15deg);
+  }
+}
+
+@media print {
+  :root {
+    --content-width: 100%;
+    --spacing: calc(var(--rhythm) / 4);
+    --section-margin: var(--rhythm);
+    --site-bg: #fff;
+  }
+
+  .layout {
+    padding: 1cm;
+  }
+
+  sparkle-icon {
+    display: none;
   }
 }

@@ -12,16 +12,12 @@ To develop, run
 
 `npm run dev`
 
-## Deployment
-
-Tomfolio2 is hosted on a Digital Ocean droplet
-
-To deploy, first run
+## Build
 
 `npm run build`
 
-and then
+## Deployment
 
-`rsync -r ssh ./dist/ tom@128.199.84.188://var/www/thomasbredingrey.com/html/`
+Tomfolio2 is hosted on a Digital Ocean App.
 
-You will need to enter your password (hint: traitor to the dragons)
+This is hooked up to the `main` branch of your Github repo and will deploy any commits pushed to this branch.

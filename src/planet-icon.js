@@ -41,7 +41,7 @@ export class PlanetIcon extends LitElement {
 
   render() {
     return html`
-      <img src="/planet.gif" aria-hidden="true" />
+      <a href="/" aria-label="Home"><img src="/planet.gif" aria-hidden="true" /></a>
     `
   }
 }

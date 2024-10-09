@@ -7,6 +7,7 @@ export class ContactList extends LitElement {
       <divided-section>
         <slot></slot>
         <styled-list .data="${dataContacts}"></styled-list>
+        <slot name="footer"></slot>
       </divided-section>
     `;
   }

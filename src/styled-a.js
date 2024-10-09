@@ -23,6 +23,13 @@ export class StyledAnchor extends LitElement {
     a:hover {
       --link-color: var(--link-hover-color);
     }
+
+    @media print {
+      a::after {
+        content: " (" attr(href) ")";
+        font-size: 80%;
+      }
+    }
   `;
 
   render() {
