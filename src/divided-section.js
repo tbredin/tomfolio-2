@@ -25,7 +25,7 @@ export class DividedSection extends LitElement {
       opacity: 0.25;
       margin: 0;
       position: absolute;
-      bottom: 0;
+      bottom: -0.25rem;
       left: 0;
     }
 

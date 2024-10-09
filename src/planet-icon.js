@@ -2,16 +2,20 @@ import { LitElement, css, html } from 'lit'
 
 export class PlanetIcon extends LitElement {
   static styles = css`
+    :host {
+      display: contents;
+    }
+    
     img {
       display: block;
-      margin: var(--spacing);
       transition: filter 1s;
       will-change: filter, opacity;
       image-rendering: pixelated;
-      margin: 2rem 0.3rem -3rem;
-      padding: 2rem;
+      padding: var(--spacing);
       z-index: 10;
       position: relative;
+      margin-left: calc(-1.5 * var(--spacing));
+      margin-bottom: calc(-0.5 * var(--spacing));
     }
 
     img:hover {

@@ -32,6 +32,7 @@
   --contrasting: black;
   
   /* Typography */
+  --root-size: 100%;
   --global-leading: 1.5;
   --weight-headings: 500;
   --weight-body: 400;
@@ -58,11 +59,13 @@
   font-weight: var(--weight-body);
   color-scheme: light dark;
   font-synthesis: none;
+  font-size: var(--root-size);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Light colour scheme */
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: var(--purple-shade-10);
@@ -74,6 +77,14 @@
   }
 }
 
+/* Scale up typography when user prefers more contrast */
+@media (prefers-contrast: more) {
+  :root {
+    --root-size: 150%;
+  }
+}
+
+/* tighten spacing on small screens */
 @media screen and (max-width: 24rem) {
   :root {
     --spacing: calc(var(--rhythm) / 4);
@@ -89,7 +100,7 @@
 
 body {
   margin: 0;
-  padding: 0 0 calc(5 * var(--spacing));
+  padding: 0 0 calc(2.5 * var(--rhythm));
   display: flex;
   flex-direction: column;
   place-items: start;
@@ -107,7 +118,8 @@ body {
   );
   background-repeat: repeat;
   background-size: 100% var(--rhythm);
-  border-bottom: 5px solid var(--contrasting);
+  border-top: 1px solid var(--contrasting);
+  border-bottom: 1px solid var(--contrasting);
 }
 
 html {
@@ -115,7 +127,7 @@ html {
 }
 
 main {
-  padding: var(--spacing) calc(var(--spacing) + var(--sparkle-w) / 2);
+  padding: calc(var(--rhythm) * 2.5) calc(var(--spacing) + var(--sparkle-w) / 2);
   width: var(--content-width);
   max-width: 100%;
   will-change: opacity;

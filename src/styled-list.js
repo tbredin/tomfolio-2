@@ -19,7 +19,7 @@ export class StyledList extends LitElement {
     ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 var(--spacing);
+      margin: 0;
     }
 
     li {

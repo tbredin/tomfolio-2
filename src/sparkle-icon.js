@@ -7,13 +7,12 @@ export class SparkleIcon extends LitElement {
       aspect-ratio: 70/79;
       display: block;
       margin: var(--spacing);
+      top: -0.1rem;
       transition: filter 1s;
       filter: brightness(60%) sepia(100%) hue-rotate(-135deg);
       will-change: filter, opacity;
       image-rendering: pixelated;
-      position: absik;
-      bottom: var(--spacing);
-      right: var(--spacing);
+      position: relative;
     }
 
     img:hover {
