@@ -52,6 +52,7 @@
 
   /* Misc */
   --sparkle-w: 70px;
+  --ease-out: cubic-bezier(.02,.65,.4,.95);
 
   /* Global styles */
   font-family: var(--font);
@@ -155,16 +156,71 @@ p {
   margin-bottom: var(--margins);
 }
 
-.earth {
-  margin: -1rem -1.5rem;
-  transition: filter 1s;
-  cursor: crosshair;
-  will-change: filter, opacity;
-  padding: 1rem;
+/* On load animations */
+:root {
+  --delay: 150ms;
+  --initial-delay: 1250ms;
+  --earth-delay: 625ms;
+  --duration: 2750ms;
 }
 
-.earth:hover {
-  filter: brightness(70%) sepia(100%) hue-rotate(-15deg);
+planet-icon, 
+divided-section, 
+project-list, 
+tools-list, 
+footer { 
+  animation: arrive var(--duration) 1 var(--ease-out) both; 
+  position: relative; 
+  display: block; 
+}
+planet-icon {
+  animation-delay: var(--earth-delay);
+}
+divided-section, 
+project-list, 
+tools-list, 
+footer { animation-delay: calc(var(--earth-delay) + var(--initial-delay) + 5 * var(--delay)); }
+divided-section:nth-child(1), 
+project-list:nth-child(1), 
+tools-list:nth-child(1) { animation-delay: calc(var(--earth-delay) + var(--initial-delay) + 1 * var(--delay)); }
+divided-section:nth-child(2), 
+project-list:nth-child(2), 
+tools-list:nth-child(2) { animation-delay: calc(var(--earth-delay) + var(--initial-delay) + 2 * var(--delay)); }
+divided-section:nth-child(3), 
+project-list:nth-child(3), 
+tools-list:nth-child(3) { animation-delay: calc(var(--earth-delay) + var(--initial-delay) + 3 * var(--delay)); }
+divided-section:nth-child(4), 
+project-list:nth-child(4), 
+tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initial-delay) + 4 * var(--delay)); }
+
+@keyframes arrive {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--rhythm));
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  planet-icon, 
+  divided-section, 
+  project-list, 
+  tools-list, 
+  footer { 
+    animation-name: fade-in;
+  }
 }
 
 @media (prefers-color-scheme: light) {
