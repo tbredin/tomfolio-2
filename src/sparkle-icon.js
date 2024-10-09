@@ -11,7 +11,7 @@ export class SparkleIcon extends LitElement {
       filter: brightness(60%) sepia(100%) hue-rotate(-135deg);
       will-change: filter, opacity;
       image-rendering: pixelated;
-      position: fixed;
+      position: absik;
       bottom: var(--spacing);
       right: var(--spacing);
     }
@@ -39,7 +39,7 @@ export class SparkleIcon extends LitElement {
 
   render() {
     return html`
-      <img src="src/assets/sparkle.gif" aria-hidden="true" />
+      <img src="/sparkle.gif" aria-hidden="true" />
     `
   }
 }

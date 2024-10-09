@@ -82,7 +82,7 @@ export class StyledList extends LitElement {
             class="bullet" 
             aria-hidden="true" 
             alt="+" 
-            src="/src/assets/bullet.png" 
+            src="/bullet.png" 
           />
           ${item.url || item.to
             ? html`<styled-a href="${item.url || item.to}">${item.title}</styled-a>`
@@ -91,7 +91,7 @@ export class StyledList extends LitElement {
             title="View award won for ${item.title}" 
             aria-label="View award won for ${item.title}" 
             alt="View award won for ${item.title}" 
-            src="/src/assets/award.gif" 
+            src="/award.gif" 
           /></a>` : ''}
         </li>`
     );
