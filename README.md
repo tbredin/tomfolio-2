@@ -8,6 +8,8 @@ Currently need to run nvm use 20 when I open a new terminal (likely can be solve
 
 ## Dev
 
+First, you may want to run `nvm use 20`
+
 To develop, run
 
 `npm run dev`
