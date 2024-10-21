@@ -1,4 +1,6 @@
 import { LitElement, css, html } from 'lit';
+import bulletImg from './assets/bullet.png'
+import awardImg from './assets/award.gif'
 
 /**
  * A custom element that renders a list of projects, clients, or contacts
@@ -82,7 +84,7 @@ export class StyledList extends LitElement {
             class="bullet" 
             aria-hidden="true" 
             alt="+" 
-            src="/bullet.png" 
+            src="${bulletImg}" 
           />
           ${item.url || item.to
             ? html`<styled-a href="${item.url || item.to}">${item.title}</styled-a>`
@@ -91,7 +93,7 @@ export class StyledList extends LitElement {
             title="View award won for ${item.title}" 
             aria-label="View award won for ${item.title}" 
             alt="View award won for ${item.title}" 
-            src="/award.gif" 
+            src="${awardImg}" 
           /></a>` : ''}
         </li>`
     );

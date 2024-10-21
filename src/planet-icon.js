@@ -1,4 +1,5 @@
 import { LitElement, css, html } from 'lit'
+import planetImg from './assets/planet.gif'
 
 export class PlanetIcon extends LitElement {
   static styles = css`
@@ -41,7 +42,9 @@ export class PlanetIcon extends LitElement {
 
   render() {
     return html`
-      <a href="/" aria-label="Home"><img src="/planet.gif" aria-hidden="true" /></a>
+      <a href="/" aria-label="Home">
+        <img src="${planetImg}" alt="Animated pixel art icon of earth in front of some twinkling stars" aria-hidden="true" />
+      </a>
     `
   }
 }

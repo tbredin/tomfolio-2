@@ -234,7 +234,7 @@ tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initi
 
 @media print {
   :root {
-    --content-width: 100%;
+    --content-width: 85%;
     --spacing: calc(var(--rhythm) / 4);
     --section-margin: var(--rhythm);
     --site-bg: #fff;
@@ -246,5 +246,9 @@ tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initi
 
   sparkle-icon {
     display: none;
+  }
+
+  @page {
+    padding: 2cm;
   }
 }

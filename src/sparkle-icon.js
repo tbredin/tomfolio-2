@@ -1,4 +1,5 @@
 import { LitElement, css, html } from 'lit'
+import sparkleImg from './assets/sparkle.gif'
 
 export class SparkleIcon extends LitElement {
   static styles = css`
@@ -38,7 +39,7 @@ export class SparkleIcon extends LitElement {
 
   render() {
     return html`
-      <img src="/sparkle.gif" aria-hidden="true" />
+      <img src="${sparkleImg}" aria-hidden="true" />
     `
   }
 }
