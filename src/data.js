@@ -79,6 +79,7 @@ export const dataClients = [
   },
   {
     title: "Golden Homes",
+    url: "https://goldenhomes.co.nz/"
   },
   {
     title: "Bayside City Council",
@@ -100,9 +101,6 @@ export const dataClients = [
   },
   {
     title: "Ports Australia",
-  },
-  {
-    title: "Lode",
   },
   {
     title: "GMHBA",
