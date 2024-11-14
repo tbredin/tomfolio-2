@@ -1,14 +1,10 @@
-# TomFolio2: using Vite create with Lit3
+# TomFolio2: using Vite and Lit 3
 
-This is the project you get when you run `npm create vite@latest`.
+Starter project created with `npm create vite@latest`.
 
-I followed the setup guide here: https://vite.dev/guide/
-
-Currently need to run nvm use 20 when I open a new terminal (likely can be solved by adding something to bash profile? But I'm lazy..)
+Vite setup guide here: https://vite.dev/guide/
 
 ## Dev
-
-First, you may want to run `nvm use 20`
 
 To develop, run
 
@@ -23,3 +19,7 @@ To develop, run
 Tomfolio2 is hosted on a Digital Ocean App.
 
 This is hooked up to the `main` branch of your Github repo and will deploy any commits pushed to this branch.
+
+## Art
+
+Animation source files are in the `src/assets` folder, authored in Aesprite
