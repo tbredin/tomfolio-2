@@ -9,6 +9,7 @@ export default defineConfig({
         404: resolve(__dirname, '404.html'),
         cv: resolve(__dirname, 'cv.html'),
       },
+      base: '/cv/'
     },
   },
 })
