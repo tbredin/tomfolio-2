@@ -132,7 +132,7 @@ export const dataClients = [
   },
   {
     title: "ACMI: The Story of the Moving Image",
-    url: "https://agda.com.au/agda-award/agda-design-awards-2021/finalist/brand-and-identity/95024",
+    url: "https://www.acmi.net.au/whats-on/story-of-the-moving-image-exhibition/",
     award: true,
   },
   {
