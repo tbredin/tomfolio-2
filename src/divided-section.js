@@ -21,7 +21,6 @@ export class DividedSection extends LitElement {
       padding-top: var(--section-margin);
       padding-bottom: var(--section-margin);
       position: relative;
-      page-break-inside: avoid;
     }
     styled-hr {
       position: absolute;

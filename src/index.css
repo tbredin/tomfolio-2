@@ -244,6 +244,7 @@ tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initi
     --spacing: calc(var(--rhythm) / 4);
     --section-margin: var(--rhythm);
     --site-bg: #fff;
+    --site-color: var(--green-shade-90);
   }
 
   .layout {
@@ -254,8 +255,8 @@ tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initi
     display: none;
   }
 
-  @page {
-    padding: 2cm;
+  .no-print {
+    display: none;
   }
 }
 
@@ -263,7 +264,12 @@ tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initi
 .opacity-80 {
   opacity: 0.8;
 }
-
+/* half-baseline margin utility */
 .margin-half {
   margin-bottom: var(--spacing);
 }
+
+.break-avoid {
+  page-break-inside: avoid;
+}
+
