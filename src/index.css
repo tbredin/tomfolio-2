@@ -38,6 +38,7 @@
   --weight-body: 400;
   --size-headings: 0.875rem;
   --size-body: 0.875rem;
+  --size-small: 0.75rem;
   --style-headings: italic;
   --style-body: normal;
   --color-headings: #fff;
@@ -47,7 +48,7 @@
   --font: "IBM Plex Mono", "Space mono", monospace;
   --spacing: calc(var(--rhythm) / 2);
   --margins: 0;
-  --content-width: 32rem;
+  --content-width: 42rem;
   --section-margin: calc(var(--rhythm) * 2);
 
   /* Misc */
@@ -156,12 +157,17 @@ p {
   margin-bottom: var(--margins);
 }
 
+.text-small {
+  font-size: var(--size-small);
+  line-height: calc(14/12 * var(--global-leading));
+}
+
 /* On load animations */
 :root {
-  --delay: 150ms;
-  --initial-delay: 1250ms;
-  --earth-delay: 625ms;
-  --duration: 2750ms;
+  --delay: 125ms;
+  --initial-delay: 750ms;
+  --earth-delay: 250ms;
+  --duration: 1500ms;
 }
 
 planet-icon, 
@@ -251,4 +257,13 @@ tools-list:nth-child(4) { animation-delay: calc(var(--earth-delay) + var(--initi
   @page {
     padding: 2cm;
   }
+}
+
+/* utility to mute some text */
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.margin-half {
+  margin-bottom: var(--spacing);
 }

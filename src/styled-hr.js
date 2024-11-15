@@ -21,8 +21,14 @@ export class StyledHr extends LitElement {
 
     .inline {
       margin-top: var(--spacing);
-      margin-bottom: calc(var(--spacing) / 2);
-      width: 0.25rem
+      margin-bottom: calc(var(--spacing) - 1px);
+      width: 0.25rem;
+      display: block;
+    }
+
+    :host {
+      display: block;
+      line-height: calc(14/16 * var(--global-leading));
     }
   `;
 
